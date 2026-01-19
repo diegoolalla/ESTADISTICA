@@ -1,88 +1,190 @@
 # ESTADISTICA
 TAREA ESTADISTICA
-PRUEBA EVALUACIÓN CURSO 24-25
-Ejercicio 1
-La prueba de tolerancia a la glucosa, también conocida como
-«examen de tolerancia oral a la glucosa», mide la respuesta del
-cuerpo al azúcar (glucosa). Esta prueba se puede usar como prueba
-de detección para la diabetes de tipo 2. En el departamento de
-investigación de un hospital se está realizando un estudio para
-conocer si la tolerancia a la glucosa en pacientes sanos tiende a
-decrecer a medida que la edad de la persona aumenta, es decir
-tarda más tiempo en desaparecer en nuestro organismo conforme
-envejecemos. Para obtener las conclusiones del estudio se
-suministra una dosis de glucosa, en forma de un preparado via oral,
-a dos muestras de pacientes sanos escogidos al azar, jovenes( edad
-menor de 30) y otros adultos ( edad superior a 30). Consideraremos
-estas muestras independientes .
-El test consistió en realizar la medición de glucosa en sangre en el
-momento de la toma ( nivel basal ) de 100 gramos de glucosa y a los 60
-minutos de la toma. Los resultados se muestran en el Excel. En la primera
-columna se representa con 1 a los pacientes cuyo rango de edad es menor
-que 30 ( jóvenes) y con 2 a los pacientes cuyo rango de edad es mayor
-que 30, en la segunda columna la concentración en sangre en el momento
-de la toma ( nivel basal, en mg/Dl) y en la tercera columna la
-concentración de glucosa pasada una hora de la ingesta de la pastilla en
-mg/Dl
+
+Se basa en un estudio hospitalario sobre la tolerancia oral a la glucosa, cuyo objetivo es comprobar si en pacientes sanos la glucosa tarda más en “desaparecer” del organismo a medida que aumenta la edad; para ello se administran 100 gramos de glucosa por vía oral a dos muestras independientes elegidas al azar: grupo 1 (jóvenes, edad < 30) y grupo 2 (adultos, edad > 30), midiéndose la glucosa en sangre en dos momentos: nivel basal (en el momento de la toma, mg/dL) y nivel a los 60 minutos (mg/dL). Los datos están en un Excel donde la columna 1 codifica el grupo (1 jóvenes, 2 adultos), la columna 2 contiene el nivel basal y la columna 3 el nivel a los 60 minutos. En el Ejercicio 1 se pide, para el nivel basal, calcular con un programa estadístico las medidas de centralización y dispersión para cada grupo (por ejemplo media, mediana, varianza, desviación típica, rango, coeficiente de variación, etc.) e indicar en cada caso si la media es representativa; además, estudiar la simetría y la curtosis del nivel basal específicamente en los adultos (grupo 2); calcular en el grupo 1 los cuartiles (Q1, Q2/mediana, Q3) de ambas variables (basal y 60 minutos), explicar su significado, construir el box-plot correspondiente y analizar la posible presencia de valores atípicos; y finalmente comprobar la normalidad de los datos del nivel de glucosa a los 60 minutos para cada grupo, usando el procedimiento adecuado (pruebas de normalidad y/o apoyo gráfico). En el Ejercicio 2, usando únicamente a los jóvenes (grupo 1), se estudia la relación entre nivel basal y nivel a los 60 minutos: primero hay que evaluar la relación lineal de forma gráfica y con algún estadístico razonado (por ejemplo correlación); después se debe ajustar un modelo lineal que explique la glucosa a los 60 minutos en función del basal y hacer una estimación para un paciente con basal 83 mg/dL; también se pide indicar qué porcentaje de la variabilidad del nivel a los 60 minutos no queda explicado por el modelo; y, por último, interpretar el modelo para responder cuánto cambiaría el nivel a 60 minutos si el basal aumentara 5 mg/dL (interpretación de la pendiente). En el Ejercicio 3, (a) se plantea si puede admitirse que el nivel medio basal en jóvenes es 88 mg/dL, para lo cual debes construir intervalos de confianza al 95% y 99% para la media de los jóvenes y responder con esos intervalos o mediante un contraste de hipótesis equivalente; (b) calcular el intervalo de confianza al 95% para la diferencia de medias del nivel basal entre adultos y jóvenes, interpretarlo y decidir si puede concluirse que ambos niveles basales son iguales con α = 0,05, suponiendo que se cumplen las condiciones teóricas necesarias; (c) estimar la proporción poblacional con nivel basal > 95 mg/dL (prediabetes) usando toda la muestra, obtener un intervalo de confianza al 98% y contrastar la hipótesis de que dicha proporción es 0,15 con nivel de significación del 5%; y (d, voluntario) comprobar si existe una variación significativa en adultos después de la toma, planteando un contraste de muestras emparejadas al 5% basado en las diferencias entre el nivel basal y el nivel a los 60 minutos dentro del grupo de adultos, ya que se comparan dos mediciones del mismo individuo.
+
+y ahora con esto Introducción
+La práctica del módulo “Programación Python (avanzado)” servirá para afianzar
+y confirmar que se ha adquirido el conocimiento de la materia impartida a lo
+largo del módulo. Gran parte del conocimiento necesario para realizar esta
+práctica se ha explicado y desarrollado en clase mediante ejemplos que se
+pueden reutilizar. Ante cualquier duda sobre cómo realizar algunos de los
+puntos se puede utilizar la documentación entregada al inicio del módulo en la
+que vienen diferentes ejemplos y que el alumno podrá apoyarse en ellos.
+¿En qué consiste la práctica?
+El alumno, empleando los conocimientos adquiridos en los módulos de
+“Fundamentos de Python” y “Python Avanzado”, debe ser capaz de generar un
+Dataset (conjunto de datos) a partir de un algoritmo que genere nombres de
+servidores (hostnames) “random” y que habremos visto previamente en clase.
+Con este Dataset el alumno debe ser capaz de generar un DataFrame de
+Pandas y debe generar una serie de gráficos con Matplotlib. No es obligatorio
+realizar todos los puntos. Se puede hacer una entrega parcial, realizando solo
+los puntos que el alumno pueda o sepa hacer. Se considerará aprobada si la
+nota es igual o mayor a 5 puntos.
+Requisitos y puntuaciones para realizar la práctica:
+1. Importar todas las librerías necesarias. (+0.15 puntos)
+2. Inicializar algunas variables que después modificaremos. (+0.15 puntos)
+3. Crear una función para generar los hostnames en base a unas reglas
+(+1.5 puntos)
+Estas reglas son:
+● La función se ha de llamar set_hostnames y debe recibir un
+parámetro llamado number_of_hosts de tipo int que represente el
+número de hosts que queremos generar.
+● El hostname debe estar compuesto por un total de 8 carácteres
+alfanuméricos, las letras siempre mayúsculas.
+● El primer caracter debe indicar el sistema operativo, siendo L
+para Linux, S para Solaris, A para AIX y H para HP-UX. La proporción
+aproximada de sistemas operativos debe ser:
 2
-a) Obtener, usando algún programa estadístico, las medidas de
-centralización y dispersión para cada uno de los dos grupos de
-control para el nivel de glucosa basal, especificando para cada uno
-de los casos si la media es o no representativa.
-b) Estudiar la simetría y la curtosis del nivel de glucosa basal en los
-adultos ( grupo de control 2)
-c)Indicar para cada una de las variables de estudio (nivel glucosa
-basal y nivel glucosa pasados 60 min) y en el grupo de control 1 el
-valor de los cuartiles y su significado y obtener el box- plot (
-diagrama de cajas) correspondiente. Estudiar la presencia devalores
-atípicos.
-d) Estudiar la normalidad de los datos de cada uno de los grupos de
-control estudiados para el nivel de glucosa pasados 60 minutos.
-Ejercicio 2
-Con los datos del fichero anterior, se quiere estudiar la relación
-existente entre el nivel basal y el nivel de glucosa que tienen los
-pacientes sanos jóvenes( grupo 1) una hora después de tomar el
-preparado de glucosa. Se pide:
-a) Estudiar la relación lineal existente entre estas dos variables de
-estudio gráficamente y mediante algún valor estadístico de forma
-razonada.
-b) Obtener un modelo lineal que explica el nivel de glucosa en
-sangre a los 60 minutos en función del nivel basal del paciente y
-realizar la estimación para un paciente cuyo nivel basal es 83 mg/Dl
-c)¿Qué tanto por ciento del nivel de glucosa en sangre pasados 60
-minutos queda no queda explicado por el anterior modelo?
-d)Si aumentásemos el nivel basal de un paciente en 5 mg/Dl ¿Qué
-variación experimentaría su nivel de glucosa al cabo de 60 minutos?
+Programación Python (avanzado) PRÁCTICA
+○ Linux: 40%
+○ Solaris: 30%
+○ AIX: 20%
+○ HP-UX: 10%
+● El segundo caracter debe indicar el entorno, siendo D para
+Development, I para Integration, T para Testing, S para Staging y P
+para Production. La proporción aproximada de entornos debe ser:
+○ Development: 10%
+○ Integration: 10%
+○ Testing: 25%
+○ Staging: 25%
+○ Production: 30%
+● Los tres siguientes caracteres deben indicar el país, siendo NOR
+para Norway, FRA para France, ITA para Italy, ESP para Spain, DEU
+para Germany e IRL para Ireland. La proporción aproximada de
+países debe ser:
+○ Norway: 6%
+○ France: 9%
+○ Italy: 16%
+○ Spain: 16%
+○ Germany: 23%
+○ Ireland: 30%
+● Por último 3 dígitos que indiquen el número de nodo que ya
+existe para un mismo sistema operativo, entorno y país. El valor
+debe ser incremental, comenzando en 001 y con un valor máximo
+de 999.
+4. Crear una función para obtener el nombre del SO. (+0.5 puntos)
+La función se ha de llamar get_os, debe recibir un parámetro llamado
+hostname de tipo str y debe devolver una cadena Linux, Solaris, AIX o
+HP-UX dependiendo de la primera letra del parámetro hostname. Debería
+ser improbable que el hostname recibido como parámetro comience por
+una letra diferente de L, S, A o H, pero de darse el caso, la función debe
+devolver la cadena Unknow.
 3
-Ejercicio 3
-a) Se quiere estudiar si se puede admitir que el nivel medio de
-glucosa en sangre en el momento de la ingestión en los jóvenes
-es 88 mg/Dl. Obtener el intervalo de confianza al 95% y al 99%
-para el nivel medio de glucosa en sangre de los jóvenes y
-posteriormente contesta a la cuestión planteada con los
-resultados obtenidos o con un contraste de hipótesis.
-b) Obtener los intervalos de confianza al 95% para la diferencia de
-medias en el nivel basal de glucosa entre adultos yjovenes e
-interpreta los resultados. ¿Se puede concluir que el nivel basal
-de glucosa de los jóvenes y los adultos es el mismo con nivel de
-significación del 5%? .Suponiendo que se cumplen las condiciones
-iniciales teóricas para obtener los intervalos de confianza
-c) Se quiere estudiar la proporción de la población con un nivel
-basal de glucosa superior a 95 mg/Dl (prediabetes). A partir de
-la muestra del fichero (tomando todos los datos) obtener un
-intervalo de confianza al 98% y contrastar la hipótesis que la
-proporción de la población con glucosa superior a 95 mg/Dl es
-0,15 con nivel de significación del 5%.
-d) (VOLUNTARIO) ¿Se detecta una variación significativa del nivel
-de glucosa en sangre en el grupo de los adultos después de la
-toma ?
-Nota: Sepretende comprobar si, como muestran los datos, los
-niveles d de glucosa en sangre son distintos para los adultos en el
-momento de la ingestión y a los 60 minutos, por ello para
-contestar a la pregunta has de considerar las series de datos
-obtenidas a partir de las diferencias entre el nivel basal y el nivel
-de glucosa al cabode 60 minutos en el grupo de los adultos
+Programación Python (avanzado) PRÁCTICA
+5. Crear una función para obtener el nombre del entorno. (+0.5 puntos)
+La función se ha de llamar get_enviroment, debe recibir un parámetro
+llamado hostname de tipo str y debe devolver una cadena Development,
+Integration, Testing, Staging o Production dependiendo de la segunda
+letra del parámetro hostname. Debería ser improbable que el hostname
+recibido como parámetro tenga por segundo caracter por una letra
+diferente de D, I, T, S o P, pero de darse el caso, la función debe devolver
+la cadena Unknow.
+6. Creamos una función para obtener el nombre del país. (+0.5 puntos)
+La función se ha de llamar get_country, debe recibir un parámetro
+llamado hostname de tipo str y debe devolver una cadena Norway,
+Germany, Italy, Spain, Ireland o France dependiendo de las letras de la
+tercera a la quinta del parámetro hostname. Debería ser improbable que el
+hostname recibido como parámetro tenga por caracteres en las
+posiciones 3, 4, 5, caracteres diferentes de NOR, DEU, ITA, ESP, IRL o FRA,
+pero de darse el caso, la función debe devolver la cadena Unknow.
+7. Crear una función para generar el DataFrame. (+1 punto)
+La función se ha de llamar set_dataframe y debe recibir un parámetro
+llamado count de tipo int, que represente el número de registros (filas)
+que vemos a generar. Para poder establecer un valor a la variable df que
+se encuentra fuera de la función y que inicialmente iniciamos con un
+valor None, debemos invocar a la variable df como global dentro de esta
+función. A continuación debemos llamar a la función set_hostnames
+pasándole como argumento el parámetro count. Después debemos ir
+añadiendo a la lista dataset que teníamos inicializada al principio de la
+práctica (primer punto) como lista vacía [] un diccionario por cada
+hostname de nuestra lista hostnames. Los campos de este diccionario
+deben ser:
+● hostname: Por ejemplo LDIRL003
+● os: Por ejemplo Linux
+● enviroment: Por ejemplo Development
+● country: Por ejemplo Ireland
+● node: De tipo int, por ejemplo 3
 4
-(contraste de muestras emparejadas).
-Plantea el correspondiente contraste de hipótesis considerando
-un nivel de significación del 5%.
+Programación Python (avanzado) PRÁCTICA
+Finalmente creamos un DataFrame utilizando los datos de la lista de
+diccionarios dataset y asignando el DataFrame de Pandas a la variable
+global df.
+8. Crear el DataFrame. (+0.2 puntos)
+Invocamos a la función set_dataframe pasándole como argumento el
+entero 1500. Inspeccionamos el DataFrame df para ver si se ha
+generado bien.
+9. Guardar el DataFrame generado en un fichero CSV. (+0.5 puntos)
+El dataframe df recién generado debemos volcarlo a un fichero CSV
+llamado hosts.csv, ubicado en la misma carpeta donde se encuentra el
+libro de Jupyter Notebook, debe incluir las cabeceras (header=True) y no
+debe incluir los índices (index=False). A continuación hay que hacer la
+prueba de leer el archivo generado mediante el método read_csv,
+almacenar el DataFrame en una variable llamada hosts_df y visualizarlo
+para ver si se ha generado bien. Se tiene que ver así (más o menos, los
+nombres de los hostnames evidentemente no tienen por qué ser
+exactamente iguales):
+5
+Programación Python (avanzado) PRÁCTICA
+10.Generar un único gráfico, agrupando para cada país (country) los
+entornos (enviroment). (+0.5 puntos)
+Se debe utilizar la función unstack y se debe generar un plot de tipo
+barras (kind=bar). Debe quedar (más o menos) así:
+11.Crear una figura con 4 gráficos en una malla de 2 filas y 2 columnas.
+(+4.5 puntos)
+● En la esquina superior izquierda debe aparecer un gráfico cuyo
+título sea Type of OS grouped by country. Debe ser un gráfico de
+barras horizontales que representen una agrupación (groupby) por
+cada país (country) de los sistemas operativos (os) que tiene. Se
+debe utilizar la función unstack y el plot debe ser de tipo barras
+horizontales (barh).
+● En la esquina superior derecha debe aparecer un gráfico cuyo
+título sea Total Operating Systems. Debe representar la cantidad
+total de sistemas operativos (os) que hay en el DataFrame. Se
+debe utilizar la función groupby y el gráfico debe ser de tipo tarta
+(pie). Como etiquetas (labels) debe mostrar el número de
+sistemas operativos de cada tipo, y además debe mostrarse una
+leyenda (legend) en la esquina superior derecha en la que
+aparezca para cada sistema operativo el porcentaje existente en
+el DataFrame.
+● En la esquina inferior izquierda debe aparecer un gráfico cuyo
+título sea Total hosts by country. Debe ser un gráfico de barras
+6
+Programación Python (avanzado) PRÁCTICA
+horizontales que representen la cantidad total de hosts por cada
+país, para ello se debe utilizar la función value_counts() sobre los
+países (country) del DataFrame. El gráfico generado debe incluir
+como etiqueta en el eje x el texto Number of hosts y como etiqueta
+del eje y el texto Country. También se ha de incluir el número total
+de hosts que tiene cada país a la derecha de cada barra
+horizontal. Además, se ha de añadir como valor máximo del eje x
+un número equivalente al número total de hosts de la barra que
+más host tenga +100, de este modo se verá un pequeño margen
+a la derecha que hará que se visualice un poco mejor.
+Opcionalmente se puede añadir con la librería seaborn una paleta
+de colores (color_palette) que podemos utilizar para darle un
+color degradado a las barras.
+● En la esquina inferior derecha debe aparecer un gráfico cuyo
+título sea Hosts by country grouped by enviroment. Debe
+representar una agrupación (groupby) de hosts que hay por cada
+país (country) y entorno (enviroment). Se debe utilizar la función
+unstack(0) y el plot debe ser de tipo barras (bar). Como etiqueta
+del eje y se debe añadir el texto Number of hosts.
+Finalmente se deben ajustar los márgenes y espacios entre los
+gráficos (fig.tight_layout()).
+Debe quedar (más o menos) así:
+7
+Programación Python (avanzado) PRÁCTICA
+Entrega de la práctica una vez finalizada
+La práctica debe realizarse obligatoriamente en Jupiter Notebook o Google
+Colab, y debe guardarse en un archivo que tenga el siguiente nombre y
+extensión:
+DNI_NOMBRE_APELLIDO_PRACTICA_PYTHON_AVANZADO.ipynb
+Por ejemplo, si el nombre del alumno es John Doe y su DNI es 12345678A el
+archivo que hay que generar y entregar debe tener el siguiente nombre:
+12345678A_JOHN_DOE_PRACTICA_PYTHON_AVANZADO.ipynb
+No se debe adjuntar ninguna otra documentación adicional. Cualquier duda
+sobre la realización de la práctica se puede consultar en el foro del módulo o
+contactar con el profesor a través de la plataforma de la Universidad.
+
+Esta práctica del módulo “Programación Python (avanzado)” tiene como objetivo afianzar los conocimientos vistos en “Fundamentos de Python” y “Python Avanzado” mediante la generación de un dataset a partir de un algoritmo que crea hostnames aleatorios siguiendo reglas concretas, su transformación a un DataFrame de Pandas y la creación de gráficos con Matplotlib; la entrega puede ser parcial y se considera aprobada con una nota de 5 o más puntos, apoyándote en los ej
