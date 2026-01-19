@@ -1,0 +1,420 @@
+
+============================================================================
+                ANÁLISIS ESTADÍSTICO DE TOLERANCIA A LA GLUCOSA
+============================================================================
+
+1. MEDIDAS DE CENTRALIZACIÓN
+------------------------------------------------------------
+
+JÓVENES - Glucosa Basal:
+  Media: 86.83 mg/dL
+  Mediana: 87.00 mg/dL
+  Moda: 85.00 mg/dL
+   Moda: 88.00 mg/dL
+   Moda: 90.00 mg/dL
+   Moda: 86.00 mg/dL
+   Moda: 84.00 mg/dL
+   Moda: 89.00 mg/dL
+   Moda: 87.00 mg/dL
+
+JÓVENES - Glucosa 60 min:
+  Media: 113.80 mg/dL
+  Mediana: 114.00 mg/dL
+  Moda: 110.00 mg/dL
+   Moda: 115.00 mg/dL
+   Moda: 120.00 mg/dL
+   Moda: 112.00 mg/dL
+   Moda: 118.00 mg/dL
+   Moda: 108.00 mg/dL
+   Moda: 116.00 mg/dL
+   Moda: 107.00 mg/dL
+   Moda: 114.00 mg/dL
+   Moda: 122.00 mg/dL
+
+ADULTOS - Glucosa Basal:
+  Media: 95.47 mg/dL
+  Mediana: 95.00 mg/dL
+  Moda: 92.00 mg/dL
+   Moda: 95.00 mg/dL
+   Moda: 98.00 mg/dL
+   Moda: 94.00 mg/dL
+   Moda: 91.00 mg/dL
+
+ADULTOS - Glucosa 60 min:
+  Media: 141.43 mg/dL
+  Mediana: 141.00 mg/dL
+  Moda: 135.00 mg/dL
+   Moda: 140.00 mg/dL
+   Moda: 145.00 mg/dL
+   Moda: 150.00 mg/dL
+   Moda: 132.00 mg/dL
+   Moda: 141.00 mg/dL
+
+
+2. MEDIDAS DE DISPERSIÓN
+------------------------------------------------------------
+
+JÓVENES - Glucosa Basal:
+  Rango: 12.00 mg/dL
+  Varianza: 10.14 (mg/dL)²
+  Desviación Estándar: 3.18 mg/dL
+  Coeficiente de Variación: 3.67%
+  Rango Intercuartílico (IQR): 4.75 mg/dL
+
+JÓVENES - Glucosa 60 min:
+  Rango: 21.00 mg/dL
+  Varianza: 32.23 (mg/dL)²
+  Desviación Estándar: 5.68 mg/dL
+  Coeficiente de Variación: 4.99%
+  Rango Intercuartílico (IQR): 8.75 mg/dL
+
+ADULTOS - Glucosa Basal:
+  Rango: 12.00 mg/dL
+  Varianza: 12.74 (mg/dL)²
+  Desviación Estándar: 3.57 mg/dL
+  Coeficiente de Variación: 3.74%
+  Rango Intercuartílico (IQR): 5.75 mg/dL
+
+ADULTOS - Glucosa 60 min:
+  Rango: 25.00 mg/dL
+  Varianza: 50.39 (mg/dL)²
+  Desviación Estándar: 7.10 mg/dL
+  Coeficiente de Variación: 5.02%
+  Rango Intercuartílico (IQR): 11.50 mg/dL
+
+
+3. MEDIDAS DE SIMETRÍA (COEFICIENTE DE ASIMETRÍA)
+------------------------------------------------------------
+Interpretación: 0 = simétrica, >0 = asimetría positiva, <0 = asimetría negativa
+
+JÓVENES:
+  Glucosa Basal: 0.0229
+  Glucosa 60 min: 0.0607
+
+ADULTOS:
+  Glucosa Basal: 0.1391
+  Glucosa 60 min: 0.1320
+
+
+4. CURTOSIS (EXCESO DE CURTOSIS)
+------------------------------------------------------------
+Interpretación: 0 = mesocúrtica, >0 = leptocúrtica, <0 = platicúrtica
+
+JÓVENES:
+  Glucosa Basal: -1.0418
+  Glucosa 60 min: -1.1258
+
+ADULTOS:
+  Glucosa Basal: -1.2565
+  Glucosa 60 min: -1.1666
+
+
+5. CUARTILES
+------------------------------------------------------------
+
+JÓVENES - Glucosa Basal:
+  Q1 (25%): 84.25 mg/dL
+  Q2 (50%): 87.00 mg/dL
+  Q3 (75%): 89.00 mg/dL
+
+JÓVENES - Glucosa 60 min:
+  Q1 (25%): 109.25 mg/dL
+  Q2 (50%): 114.00 mg/dL
+  Q3 (75%): 118.00 mg/dL
+
+ADULTOS - Glucosa Basal:
+  Q1 (25%): 92.25 mg/dL
+  Q2 (50%): 95.00 mg/dL
+  Q3 (75%): 98.00 mg/dL
+
+ADULTOS - Glucosa 60 min:
+  Q1 (25%): 135.25 mg/dL
+  Q2 (50%): 141.00 mg/dL
+  Q3 (75%): 146.75 mg/dL
+
+
+6. IDENTIFICACIÓN DE OUTLIERS
+------------------------------------------------------------
+Método: Rango Intercuartílico (IQR)
+Outliers: valores < Q1 - 1.5*IQR o > Q3 + 1.5*IQR
+
+JÓVENES - Glucosa Basal:
+  Número de outliers: 0
+
+JÓVENES - Glucosa 60 min:
+  Número de outliers: 0
+
+ADULTOS - Glucosa Basal:
+  Número de outliers: 0
+
+ADULTOS - Glucosa 60 min:
+  Número de outliers: 0
+
+Generando gráficos box-plot...
+null device 
+          1 
+null device 
+          1 
+
+
+7. PRUEBAS DE NORMALIDAD
+------------------------------------------------------------
+Nivel de significación: α = 0.05
+H0: Los datos siguen una distribución normal
+H1: Los datos NO siguen una distribución normal
+Decisión: Si p-valor < 0.05, rechazamos H0
+
+Test de Shapiro-Wilk:
+
+JÓVENES - Glucosa Basal:
+  W = 0.9771, p-valor = 0.7441
+  Conclusión: No se rechaza H0. Los datos son normales.
+
+JÓVENES - Glucosa 60 min:
+  W = 0.9739, p-valor = 0.6491
+  Conclusión: No se rechaza H0. Los datos son normales.
+
+ADULTOS - Glucosa Basal:
+  W = 0.9540, p-valor = 0.2159
+  Conclusión: No se rechaza H0. Los datos son normales.
+
+ADULTOS - Glucosa 60 min:
+  W = 0.9675, p-valor = 0.4733
+  Conclusión: No se rechaza H0. Los datos son normales.
+null device 
+          1 
+null device 
+          1 
+
+
+8. RELACIÓN LINEAL: Glucosa Basal vs Glucosa 60 min (JÓVENES)
+------------------------------------------------------------
+Coeficiente de Correlación de Pearson: r = 0.9764
+p-valor: 0.0000
+Conclusión: La correlación es estadísticamente significativa.
+Interpretación: Correlación fuerte
+
+8.1. MODELO DE REGRESIÓN LINEAL:
+Modelo: Glucosa_60min = β0 + β1 * Glucosa_Basal + ε
+
+Ecuación estimada: Glucosa_60min = -37.3343 + 1.7405 * Glucosa_Basal
+
+Coeficiente β0 (Intercepto): -37.3343
+  Error estándar: 6.3260
+  t-valor: -5.9017
+  p-valor: 0.0000
+
+Coeficiente β1 (Pendiente): 1.7405
+  Error estándar: 0.0728
+  t-valor: 23.9065
+  p-valor: 0.0000
+
+R² (Coeficiente de determinación): 0.9533
+R² ajustado: 0.9516
+Interpretación: El modelo explica el 95.33% de la variabilidad
+
+Error estándar residual: 1.2487 con 28 grados de libertad
+
+ANOVA del modelo:
+Analysis of Variance Table
+
+Response: glucosa_60min
+              Df Sum Sq Mean Sq F value    Pr(>F)    
+glucosa_basal  1 891.14  891.14  571.52 < 2.2e-16 ***
+Residuals     28  43.66    1.56                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Intervalos de Confianza (95%) para los coeficientes:
+                   2.5 %     97.5 %
+(Intercept)   -50.292509 -24.376046
+glucosa_basal   1.591376   1.889644
+
+8.2. ESTIMACIONES CON EL MODELO:
+
+Ejemplos de predicción:
+  Si Glucosa Basal = 80 mg/dL:
+    Predicción: 101.91 mg/dL
+    IC 95%: [99.11, 104.70] mg/dL
+  Si Glucosa Basal = 85 mg/dL:
+    Predicción: 110.61 mg/dL
+    IC 95%: [107.99, 113.22] mg/dL
+  Si Glucosa Basal = 90 mg/dL:
+    Predicción: 119.31 mg/dL
+    IC 95%: [116.67, 121.95] mg/dL
+  Si Glucosa Basal = 95 mg/dL:
+    Predicción: 128.01 mg/dL
+    IC 95%: [125.14, 130.89] mg/dL
+null device 
+          1 
+null device 
+          1 
+
+
+9. INTERVALOS DE CONFIANZA PARA MEDIAS (95%)
+------------------------------------------------------------
+
+JÓVENES - Glucosa Basal:
+  Media: 86.83 mg/dL
+  Error Estándar: 0.58
+  IC 95%: [85.64, 88.02] mg/dL
+
+JÓVENES - Glucosa 60 min:
+  Media: 113.80 mg/dL
+  Error Estándar: 1.04
+  IC 95%: [111.68, 115.92] mg/dL
+
+ADULTOS - Glucosa Basal:
+  Media: 95.47 mg/dL
+  Error Estándar: 0.65
+  IC 95%: [94.13, 96.80] mg/dL
+
+ADULTOS - Glucosa 60 min:
+  Media: 141.43 mg/dL
+  Error Estándar: 1.30
+  IC 95%: [138.78, 144.08] mg/dL
+
+
+10. INTERVALOS DE CONFIANZA PARA PROPORCIONES (95%)
+------------------------------------------------------------
+
+Proporción de JÓVENES con Glucosa Basal > 85 mg/dL:
+  Proporción: 0.6333 (63.33%)
+  IC 95%: [0.4609, 0.8058] ([46.09%, 80.58%])
+
+Proporción de ADULTOS con Glucosa Basal > 95 mg/dL:
+  Proporción: 0.4667 (46.67%)
+  IC 95%: [0.2881, 0.6452] ([28.81%, 64.52%])
+
+Proporción de JÓVENES con Glucosa 60 min > 115 mg/dL:
+  Proporción: 0.4000 (40.00%)
+  IC 95%: [0.2247, 0.5753] ([22.47%, 57.53%])
+
+
+11. CONTRASTES DE HIPÓTESIS (α = 0.05)
+------------------------------------------------------------
+
+11.1. Comparación de medias: Glucosa Basal entre Jóvenes y Adultos
+H0: μ_jóvenes = μ_adultos
+H1: μ_jóvenes ≠ μ_adultos
+
+Test de igualdad de varianzas (F-test): p-valor = 0.5433
+
+Test t de Student:
+  t = -9.8849, gl = 58.00, p-valor = 0.0000
+  Media Jóvenes: 86.83 mg/dL
+  Media Adultos: 95.47 mg/dL
+  Diferencia de medias: -8.63 mg/dL
+  IC 95% para la diferencia: [-10.38, -6.89]
+
+Conclusión: Se rechaza H0. Hay diferencia significativa entre las medias.
+
+
+11.2. Comparación de medias: Glucosa 60 min entre Jóvenes y Adultos
+H0: μ_jóvenes = μ_adultos
+H1: μ_jóvenes ≠ μ_adultos
+
+Test de igualdad de varianzas (F-test): p-valor = 0.2349
+
+Test t de Student:
+  t = -16.6508, gl = 58.00, p-valor = 0.0000
+  Media Jóvenes: 113.80 mg/dL
+  Media Adultos: 141.43 mg/dL
+  Diferencia de medias: -27.63 mg/dL
+  IC 95% para la diferencia: [-30.96, -24.31]
+
+Conclusión: Se rechaza H0. Hay diferencia significativa entre las medias.
+
+
+11.3. Test de media: Glucosa Basal en Jóvenes vs valor de referencia 87 mg/dL
+H0: μ = 87
+H1: μ ≠ 87
+
+Test t de Student:
+  t = -0.2866, gl = 29, p-valor = 0.7764
+  Media muestral: 86.83 mg/dL
+  IC 95%: [85.64, 88.02]
+
+Conclusión: No se rechaza H0. No hay evidencia de diferencia con 87.
+
+
+12. ANÁLISIS DE DATOS EMPAREJADOS: ADULTOS (α = 0.05)
+------------------------------------------------------------
+Comparación: Glucosa Basal vs Glucosa 60 min en ADULTOS
+(Antes y después de la ingestión de glucosa)
+
+12.1. ESTADÍSTICAS DESCRIPTIVAS DE LAS DIFERENCIAS:
+
+Media de las diferencias: 45.97 mg/dL
+Mediana de las diferencias: 46.00 mg/dL
+Desviación estándar: 3.57 mg/dL
+Rango: [40.00, 53.00] mg/dL
+
+12.2. TEST DE NORMALIDAD DE LAS DIFERENCIAS:
+
+Shapiro-Wilk: W = 0.9687, p-valor = 0.5044
+Conclusión: Las diferencias siguen distribución normal.
+
+12.3. TEST T PAREADO:
+H0: μ_diferencia = 0 (no hay cambio tras la ingestión de glucosa)
+H1: μ_diferencia ≠ 0 (hay cambio tras la ingestión de glucosa)
+
+  t = 70.5845, gl = 29, p-valor < 0.000000
+  Media de las diferencias: 45.97 mg/dL
+  IC 95% para la diferencia media: [44.63, 47.30]
+
+Conclusión: Se rechaza H0. Hay una diferencia significativa entre los niveles
+            de glucosa basal y a los 60 min tras la ingestión.
+
+Tamaño del efecto (d de Cohen): 12.8869
+Interpretación: Efecto grande
+
+12.4. INTERVALO DE CONFIANZA (95%) PARA LA DIFERENCIA MEDIA:
+  [44.63, 47.30] mg/dL
+null device 
+          1 
+null device 
+          1 
+
+
+============================================================================
+                            RESUMEN FINAL
+============================================================================
+
+ARCHIVOS GENERADOS:
+  - boxplot_glucosa_basal.png
+  - boxplot_glucosa_60min.png
+  - histograma_jovenes_basal.png
+  - histograma_jovenes_60min.png
+  - scatter_regresion_jovenes.png
+  - diagnostico_modelo_jovenes.png
+  - diferencias_adultos.png
+  - antes_despues_adultos.png
+
+PRINCIPALES CONCLUSIONES:
+
+1. CENTRALIZACIÓN Y DISPERSIÓN:
+   - Jóvenes tienen menores niveles de glucosa (basal: 86.83 mg/dL)
+   - Adultos tienen mayores niveles de glucosa (basal: 95.47 mg/dL)
+
+2. NORMALIDAD:
+   - Ver resultados de tests de Shapiro-Wilk
+
+3. RELACIÓN LINEAL (JÓVENES):
+   - Correlación: r = 0.9764
+   - Modelo: Glucosa_60min = -37.33 + 1.74 * Glucosa_Basal
+   - R² = 0.9533 (95.33% de variabilidad explicada)
+
+4. COMPARACIÓN ENTRE GRUPOS:
+   - Diferencia en glucosa basal: 8.63 mg/dL (p-valor = 0.0000)
+   - Diferencia en glucosa 60 min: 27.63 mg/dL (p-valor < 0.000000)
+
+5. DATOS EMPAREJADOS (ADULTOS):
+   - Incremento medio tras ingestión: 45.97 mg/dL
+   - p-valor < 0.000000 (altamente significativo)
+   - Tamaño del efecto (d de Cohen): 12.8869
+
+============================================================================
+                    ANÁLISIS COMPLETADO EXITOSAMENTE
+============================================================================
+
